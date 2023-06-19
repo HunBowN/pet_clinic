@@ -116,6 +116,8 @@ $(document).ready(function () {
 
         let pets = response.data.pet
 
+        $("#showAllBtn ").css("display", "block")
+
         let newTableHeader = "<table id='table' class='table table-hover table-responsive table-bordered table-condensed'> <tr><th class='col-lg-2'>Кличка</th><th class='col-lg-2'>Тип</th><th class='col-lg-2'>Владелец</th><th class='col-lg-2'>Дата рождения</th><th class='col-lg-4'>Действия</th></tr>"
         $("#table").html(newTableHeader)
 
@@ -167,22 +169,24 @@ $(document).ready(function () {
         let newTableHeader = "<table id='table' class='table table-hover table-responsive table-bordered table-condensed'> <tr><th class='col-lg-2'>Полное имя</th><th class='col-lg-2'>Контакты</th><th class='col-lg-2'>Питомцы</th><th class='col-lg-2'>Дата рождения</th><th class='col-lg-4'>Действия</th></tr>"
         $("#table").html(newTableHeader)
 
+        $("#showAllBtn ").css("display", "block")
+
         client.forEach(client => {
           $("#table").append(`
           <tr>
             <td>${client.name} ${client.lastname}</td>
-            <td>Тел: ${client.type_name} <br>email: ${client.type_name}</td>
+            <td>Тел: ${client.phone} <br>email: ${client.email}</td>
             <td>${client.pet_name}</td>
             <td>${client.birthday}</td>
             <td> 
-              <a id='getPet' data-method='get' data-id='${client.id}' class='btn btn-primary left-margin'>
+              <a id='getClient' data-method='get' data-id='${client.id}' class='btn btn-primary left-margin'>
               <span class='glyphicon glyphicon-list'></span> Просмотр
               </a>
-              <a id='getUpdatePetPage' data-method='get' data-id='${client.id}' class='btn btn-info left-margin'>
+              <a id='getUpdateClientPage' data-method='get' data-id='${client.id}' class='btn btn-info left-margin'>
               <span class='glyphicon glyphicon-edit'></span> Редактировать
               </a>
                     
-              <a id='deleteBtn' data-method='delete' data-id='${client.id}' class='btn btn-danger delete-object'>
+              <a id='deleteClientBtn' data-method='delete' data-id='${client.id}' class='btn btn-danger delete-object'>
               <span class='glyphicon glyphicon-remove'></span> Удалить
               </a>
 
