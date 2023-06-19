@@ -1,7 +1,7 @@
 <?php
 return array(
   'host'      => 'localhost',
-  'database'  => 'hunbow',
+  'database'  => 'petc',
   'user'      => 'root',
   'password'  => 'root',
   'charset'   => 'utf8'

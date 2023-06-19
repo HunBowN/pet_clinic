@@ -21,6 +21,12 @@ echo "</form>";
 </a>
 </div>
 
+<div id="showAllBtn" class="right-button-margin">
+    <a href="/pets" class="btn btn-primary pull-right">
+        <span class="glyphicon glyphicon-list"></span> Просмотр всех питомцев
+    </a>
+</div>
+
 <?php
 
 if ($entitiesCount > 0) {

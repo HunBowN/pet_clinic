@@ -19,6 +19,12 @@ echo "</form>";
 </a>
 </div>
 
+<div id="showAllBtn" class="right-button-margin">
+    <a href="/clients" class="btn btn-primary pull-right">
+        <span class="glyphicon glyphicon-list"></span> Просмотр всех клиентов
+    </a>
+</div>
+
 <?php
 
 if ($entitiesCount > 0) {
